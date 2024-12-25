@@ -15,7 +15,7 @@ const Contacts = () => {
         <Section>
           <ListItem>
             Pest megyén belüli esemény díja -150.000ft-, mely rugalmas időbeosztással, tárgynap kora délután-tól
-            hajnalig tarthat. Az ár tartalmazza az utazást, a teljes felszrelést, rejtett költségekkel nálam nem kell
+            hajnalig tarthat. Az ár tartalmazza az utazást, a teljes felszerelést, rejtett költségekkel nálam nem kell
             számolni.
           </ListItem>
           <ListItem>Pest megyén kívül kiszállási díj költsége 120ft/km, az alapdíjon felül.</ListItem>
