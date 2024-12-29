@@ -36,8 +36,9 @@ const Accesories = () => {
           <li>DJ pult: Pioneer DDJ FLX4</li>
           <li>Keverőpult: Thunder F7</li>
           <li>
-            Thomann hangrendszer {'('}The box CL 108/115MKII, The t.amp PA 4080{')'}
+            Thomann hangrendszer {'('}The box CL 108/115MKII{')'}
           </li>
+          <li>2 db Thunder FLASH-15 700/1400W {'15″'} Bi-Amp aktív hangfal</li>
           <li>Robotlámpák, fényállvány, füstgép is rendelkezésre állnak</li>
         </List>
       </ListWrapper>
