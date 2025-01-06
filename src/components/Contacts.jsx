@@ -30,7 +30,7 @@ const Contacts = () => {
           </ListItem>
           <ListItem>
             <span className="material-symbols-outlined">email</span>
-            <a href="mailto:laszlo70@outlook.hu">laszlo70@outlook.hu</a>
+            <a href="mailto:laszlo70@outlook.hu">laszlo70@outlook.com</a>
           </ListItem>
           <ListItem>
             <ImageWrapper>
