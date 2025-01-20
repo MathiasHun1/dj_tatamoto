@@ -4,8 +4,6 @@ import Main from './components/Main';
 
 import { useState } from 'react';
 
-let x = '';
-
 function App() {
   const [showMobileMenu, setShowMobile] = useState(false);
 
