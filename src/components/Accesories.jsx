@@ -96,7 +96,7 @@ const Accesories = () => {
 const Wrapper = styled.div`
   background: black;
   color: white;
-  padding-bottom: 50px;
+  padding-bottom: 16px;
 `;
 
 const ImageSection = styled.div`
@@ -104,7 +104,8 @@ const ImageSection = styled.div`
   grid-template-columns: repeat(4, 70px);
   justify-content: start;
   border-radius: 4px;
-  padding-left: 32px;
+  padding-left: 16px;
+  margin-top: 16px;
 
   @media (${QUERIES.tabletAndUp}) {
     display: none;

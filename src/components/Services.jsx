@@ -6,7 +6,7 @@ import partyPic from '../assets/party.jpg';
 import heartSVG from '../assets/hearts.svg';
 import partySVG from '../assets/party2.svg';
 import styled from 'styled-components';
-import { COLORS } from '../constants';
+import { COLORS, QUERIES } from '../constants';
 
 const Services = () => {
   return (
@@ -49,16 +49,19 @@ const Services = () => {
 };
 
 const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @media (${QUERIES.tabletAndUp}) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const Separator = styled.div`
-  width: 80%;
+  width: 100%;
   height: 4px;
   background: black;
-  margin: 48px auto;
+  /* margin: 48px auto; */
+  margin-inline: auto;
   margin-top: 0;
   border-radius: 10px;
 `;

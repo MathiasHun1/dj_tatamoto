@@ -1,44 +1,81 @@
 import styled from 'styled-components';
-import djSVG from '../assets/dj_man.svg';
+import hero from '../assets/hero.jpg';
 
 import { COLORS, QUERIES } from '../constants';
 
 const BigLogo = () => {
   return (
     <BigLogoCont>
+      <Gradient />
       <ImageContainer>
-        <img src={djSVG} alt="" />
+        <img src={hero} alt="" />
       </ImageContainer>
+      <GradientReverse />
     </BigLogoCont>
   );
 };
 
 const BigLogoCont = styled.section`
-  display: flex;
-  justify-content: center;
-  background: linear-gradient(0deg, ${COLORS.lightBlue} 40%, black);
-  height: 450px;
+  background: linear-gradient(0deg, ${COLORS.lightBlue}, black);
+`;
 
+const Gradient = styled.div`
+  height: 50px;
+  width: 100%;
+  background: linear-gradient(0deg, ${COLORS.lightBlue} 0%, black);
   @media (${QUERIES.tabletAndUp}) {
-    height: 600px;
+    display: none;
   }
 `;
 
+const GradientReverse = styled(Gradient)`
+  width: 100%;
+  background: linear-gradient(0deg, black 0%, ${COLORS.lightBlue});
+`;
+
 const ImageContainer = styled.div`
-  width: 400px;
-  margin-top: 30px;
+  position: relative;
+  margin-inline: auto;
+
+  &::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 12px;
+    background: ${COLORS.lightBlue};
+    filter: blur(8px);
+    transform: translateY(-5px);
+  }
+
+  &::after {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 12px;
+    background: ${COLORS.lightBlue};
+    filter: blur(8px);
+    transform: translateY(6px);
+  }
+
   img {
     width: 100%;
-    transform: translateY(-70px);
+    border-radius: 10px;
   }
 
   @media (${QUERIES.tabletAndUp}) {
     width: 650px;
-    margin-top: 0;
 
     img {
       width: 100%;
-      transform: translateY(-70px);
+    }
+
+    &::after,
+    ::before {
+      display: none;
     }
   }
 `;

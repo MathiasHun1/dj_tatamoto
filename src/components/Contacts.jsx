@@ -10,19 +10,17 @@ const Contacts = () => {
     <Wrapper id="contacts">
       <Title background={`linear-gradient(black, ${COLORS.darkblue})`}>Árak, kapcsolat</Title>
 
+      <Inner>
+        <InnerTitle>Pest megyén belül:</InnerTitle>
+        <p>
+          -150.000ft, mely rugalmas időbeosztással, tárgynap kora délután-tól hajnalig tarthat. Az ár tartalmazza az
+          utazást, a teljes felszerelést, rejtett költségekkel nálam nem kell számolni.
+        </p>
+        <InnerTitle>Pest megyén kívül:</InnerTitle>
+        <p>Pest megyén kívül kiszállási díj költsége 120ft/km, az alapdíjon felül.</p>
+      </Inner>
       <List>
-        <p>Árak:</p>
-        <Section>
-          <ListItem>
-            Pest megyén belüli esemény díja -150.000ft-, mely rugalmas időbeosztással, tárgynap kora délután-tól
-            hajnalig tarthat. Az ár tartalmazza az utazást, a teljes felszerelést, rejtett költségekkel nálam nem kell
-            számolni.
-          </ListItem>
-          <ListItem>Pest megyén kívül kiszállási díj költsége 120ft/km, az alapdíjon felül.</ListItem>
-        </Section>
-      </List>
-      <List>
-        <p>Elérhetőség</p>
+        <InnerTitle>Elérhetőség</InnerTitle>
         <Section>
           <ListItem>
             <span className="material-symbols-outlined">phone</span>
@@ -52,18 +50,27 @@ const Wrapper = styled.div`
   background: ${COLORS.darkblue};
   color: white;
 
-  & p {
-    font-weight: bold;
-    text-decoration: underline;
-  }
-
   & i {
     text-decoration: underline;
   }
 `;
 
+const Inner = styled.div`
+  padding: 16px;
+
+  & p:nth-of-type(2) {
+    margin-bottom: 16px;
+  }
+`;
+
+const InnerTitle = styled.p`
+  text-decoration: underline;
+  font-weight: bold;
+`;
+
 const List = styled.ul`
   padding: 0;
+  padding-block: 16px;
   padding-left: 16px;
   max-width: 70ch;
   @media (${QUERIES.tabletAndUp}) {
@@ -72,18 +79,11 @@ const List = styled.ul`
   }
 `;
 
-const ListItem = styled.li`
-  font-size: 14px;
-  list-style-type: none;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 1.125rem;
-`;
+const ListItem = styled.p``;
 
 const Section = styled.div`
   margin-bottom: 32px;
-  padding-left: 16px;
+  /* padding-left: 16px; */
   padding-right: 32px;
 `;
 

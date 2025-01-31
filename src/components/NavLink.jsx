@@ -14,7 +14,6 @@ const Wrapper = styled.a`
   color: black;
   overflow: hidden;
   text-decoration: none;
-  font-size: 1.125rem;
   color: white;
   z-index: 10;
 

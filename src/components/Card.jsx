@@ -6,7 +6,7 @@ const Card = ({ imageSource, text, size, imgSize }) => {
   let styles;
   if (size === 'large') {
     styles = {
-      '--width': '220px',
+      '--width': '100px',
       '--height': '100%',
     };
   } else if (size === 'medium') {
@@ -32,11 +32,13 @@ const Card = ({ imageSource, text, size, imgSize }) => {
 
 const Wrapper = styled.figure`
   border-radius: 4px;
-  display: flex;
-  justify-content: center;
+  /* display: flex; */
+  /* justify-content: center; */
 `;
 
 const ImageWrapper = styled.div`
+  margin-bottom: 16px;
+  margin-left: 16px;
   position: relative;
   width: var(--width);
   height: var(--height);

@@ -20,16 +20,9 @@ const ServiceCard = ({ imageSource, svgSource, cardSize, cardText, children, dir
 const Wrapper = styled.div`
   min-height: 300px;
   background: ${COLORS.darkblue};
-  // padding-top: 72px;
-  padding-right: 32px;
-  padding-left: 32px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 32px;
-  margin-bottom: 48px;
   color: white;
+  padding: 16px;
+  padding-block: 26px;
 
   &:first-of-type {
     padding-top: 72px;
@@ -37,6 +30,14 @@ const Wrapper = styled.div`
 
   @media (${QUERIES.tabletAndUp}) {
     flex-direction: var(--wrap-direction);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    padding-right: 32px;
+    padding-left: 32px;
+    margin-bottom: 48px;
   }
 `;
 

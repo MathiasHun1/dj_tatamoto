@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { QUERIES } from '../constants';
+import { FONTSIZES, QUERIES } from '../constants';
 import { useEffect, useState } from 'react';
 import 'material-symbols';
 
@@ -10,7 +10,7 @@ const Header = ({ setShowMobile }) => {
   const [lastScrollY, setLastScrollY] = useState(0);
 
   const controlHeader = () => {
-    if (window.scrollY > 250 && window.scrollY > lastScrollY) {
+    if (window.scrollY > 100 && window.scrollY > lastScrollY) {
       setShowHeader(false);
     } else {
       setShowHeader(true);
@@ -65,16 +65,22 @@ const Logo = styled.h1`
   color: white;
   text-wrap: nowrap;
   margin-left: 0;
+  font-size: ${FONTSIZES.largeMobile};
 
   @media (${QUERIES.tabletAndUp}) {
     margin-left: 100px;
+    margin-right: 24px;
+    font-size: ${FONTSIZES.largeDesktop};
   }
 `;
 
 const Navigation = styled.nav`
   display: none;
+  font-size: ${FONTSIZES.mediumMobile};
 
   @media (${QUERIES.laptopAndUp}) {
+    font-size: ${FONTSIZES.mediumDesktop};
+
     display: flex;
     justify-content: center;
     gap: 18px;

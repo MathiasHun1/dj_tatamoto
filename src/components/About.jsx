@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { COLORS, QUERIES } from '../constants';
+import { COLORS, FONTSIZES, QUERIES } from '../constants';
 
 const About = () => {
   return (
@@ -29,20 +29,22 @@ const Wrapper = styled.article`
   display: flex;
   justify-content: center;
   padding: 26px;
-  padding-top: 100px;
-  padding-bottom: 80px;
-  margin-top: calc(-15rem);
+  padding: 16px;
+  padding-bottom: 16px;
 
   @media (${QUERIES.tabletAndUp}) {
-    padding-top: 150px;
+    padding-top: 50px;
+    padding-bottom: 80px;
   }
 `;
 
 const MainTitle = styled.h1`
+  font-size: ${FONTSIZES.mediumMobile};
   color: ${COLORS.lightBlue};
   line-height: 1.875rem;
 
   @media (${QUERIES.tabletAndUp}) {
+    font-size: ${FONTSIZES.mediumDesktop};
   }
 `;
 
@@ -51,12 +53,14 @@ const Card = styled.div`
 `;
 
 const TextContainer = styled.div`
-  font-size: 18px;
   color: white;
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 8px;
+
+  @media (${QUERIES.tabletAndUp}) {
+    align-items: center;
+  }
 `;
 
 const Text = styled.p`
