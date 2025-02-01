@@ -1,28 +1,28 @@
 import styled from 'styled-components';
 import { COLORS, QUERIES } from '../constants';
 import Card from './Card';
-// import partyPic from '../assets/party3.jpg';
+import SvgImage from './SvgImage';
 
-const ServiceCard = ({ imageSource, svgSource, cardSize, cardText, children, direction }) => {
+const ServiceCard = ({ imageSource, svgSource, svgWidth, cardSize, cardText, children, direction }) => {
   let directionProp = direction === null || direction === 'row' ? 'row' : 'row-reverse';
 
   return (
     <Wrapper style={{ '--wrap-direction': directionProp }}>
-      <div style={{ flex: 1 }}>
-        <Card imageSource={imageSource} svgSource={svgSource} size={cardSize} text={cardText} />
-      </div>
+      <ImagesContainer>
+        <Card imageSource={imageSource} size={cardSize} text={cardText} />
+        <SvgImage svgSource={svgSource} svgWidth={svgWidth} />
+      </ImagesContainer>
       <ChildWrapper>{children}</ChildWrapper>
-      <SvgImage src={svgSource} alt="" />
     </Wrapper>
   );
 };
 
 const Wrapper = styled.div`
-  min-height: 300px;
   background: ${COLORS.darkblue};
   color: white;
   padding: 16px;
   padding-block: 26px;
+  margin-bottom: 16px;
 
   &:first-of-type {
     padding-top: 72px;
@@ -41,20 +41,14 @@ const Wrapper = styled.div`
   }
 `;
 
-const ChildWrapper = styled.div`
-  max-width: 380px;
-  flex: 1;
+const ImagesContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 `;
 
-const SvgImage = styled.img`
-  display: none;
-  width: 300px;
-  align-self: center;
+const ChildWrapper = styled.div`
   flex: 1;
-
-  @media (${QUERIES.laptopAndUp}) {
-    display: block;
-  }
 `;
 
 export default ServiceCard;

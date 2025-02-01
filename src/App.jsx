@@ -22,6 +22,7 @@ const Wrapper = styled.div`
   max-width: 1700px;
   margin: 0px auto;
   font-size: ${FONTSIZES.smallMobile};
+  overflow: hidden;
 
   @media (${QUERIES.tabletAndUp}) {
     font-size: ${FONTSIZES.smallDesktop};

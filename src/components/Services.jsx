@@ -4,7 +4,7 @@ import Title from './Title';
 import weddingPic from '../assets/wedding.jpg';
 import partyPic from '../assets/party.jpg';
 import heartSVG from '../assets/hearts.svg';
-import partySVG from '../assets/party2.svg';
+import partySVG from '../assets/jumping.svg';
 import styled from 'styled-components';
 import { COLORS, QUERIES } from '../constants';
 
@@ -15,6 +15,7 @@ const Services = () => {
       <ServiceCard
         imageSource={weddingPic}
         svgSource={heartSVG}
+        svgWidth={'150px'}
         cardSize={'large'}
         cardText={'Esküvő'}
         direction={'row'}>
@@ -34,6 +35,7 @@ const Services = () => {
       <ServiceCard
         imageSource={partyPic}
         svgSource={partySVG}
+        svgWidth={'160px'}
         cardSize={'large'}
         cardText={'Rendezvény'}
         direction={'reverse'}>
@@ -53,6 +55,7 @@ const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
   }
 `;
 
