@@ -16,13 +16,13 @@ const BigLogo = () => {
 };
 
 const BigLogoCont = styled.section`
-  background: linear-gradient(0deg, ${COLORS.lightBlue}, black);
+  background: linear-gradient(0deg, ${COLORS.lightBlue}, ${COLORS.primary});
 `;
 
 const Gradient = styled.div`
   height: 50px;
   width: 100%;
-  background: linear-gradient(0deg, ${COLORS.lightBlue} 0%, black);
+  background: linear-gradient(0deg, ${COLORS.lightBlue} 0%, ${COLORS.primary});
   @media (${QUERIES.tabletAndUp}) {
     display: none;
   }
@@ -30,7 +30,7 @@ const Gradient = styled.div`
 
 const GradientReverse = styled(Gradient)`
   width: 100%;
-  background: linear-gradient(0deg, black 0%, ${COLORS.lightBlue});
+  background: linear-gradient(0deg, ${COLORS.primary} 0%, ${COLORS.lightBlue});
 `;
 
 const ImageContainer = styled.div`

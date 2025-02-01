@@ -8,7 +8,7 @@ import FBlogo from '../assets/Facebook_Logo_Secondary.png';
 const Contacts = () => {
   return (
     <Wrapper id="contacts">
-      <Title background={`linear-gradient(black, ${COLORS.darkblue})`}>Árak, kapcsolat</Title>
+      <Title background={`linear-gradient(${COLORS.primary}, ${COLORS.darkblue})`}>Árak, kapcsolat</Title>
 
       <Inner>
         <InnerTitle>Pest megyén belül:</InnerTitle>
@@ -40,6 +40,9 @@ const Contacts = () => {
       <Inner>
         <InnerTitle>Személyesen:</InnerTitle>
         <ListItem>1201 Budapest, Szondi utca 11</ListItem>
+      </Inner>
+
+      <Inner>
         <InnerTitle>Nyitvatartás:</InnerTitle>
         <ListItem>Minden hétköznap 9-18</ListItem>
       </Inner>
@@ -49,27 +52,25 @@ const Contacts = () => {
 
 const Wrapper = styled.div`
   background: ${COLORS.darkblue};
-  color: white;
+
+  @media (${QUERIES.tabletAndUp}) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const Inner = styled.div`
   padding: 16px;
+
+  @media (${QUERIES.tabletAndUp}) {
+    width: 690px;
+  }
 `;
 
 const InnerTitle = styled.p`
   text-decoration: underline;
   font-weight: bold;
-`;
-
-const List = styled.ul`
-  padding: 0;
-  padding-block: 16px;
-  padding-left: 16px;
-  max-width: 70ch;
-  @media (${QUERIES.tabletAndUp}) {
-    margin-left: 30%;
-    padding-left: 0;
-  }
 `;
 
 const ListItem = styled.li`
@@ -82,12 +83,6 @@ const ListItem = styled.li`
   &:hover {
     cursor: pointer;
   }
-`;
-
-const Section = styled.div`
-  margin-bottom: 32px;
-  /* padding-left: 16px; */
-  padding-right: 32px;
 `;
 
 const Image = styled.img`

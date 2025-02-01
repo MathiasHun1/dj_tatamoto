@@ -13,12 +13,13 @@ export default Title;
 
 const SectionTitle = styled.h2`
   font-size: ${FONTSIZES.mediumMobile};
-  color: ${COLORS.lightBlue};
+  color: ${COLORS.moderateBlue};
   line-height: 1.875rem;
 
   @media (${QUERIES.tabletAndUp}) {
-    text-align: center;
     font-size: ${FONTSIZES.mediumDesktop};
+    width: 690px;
+    transform: translateX(-20px);
   }
 `;
 
@@ -27,9 +28,10 @@ const Wrapper = styled.div`
   padding-left: 16px;
   width: 100%;
   background: ${(props) => props.$background};
+  display: flex;
+  justify-content: center;
 
   @media (${QUERIES.tabletAndUp}) {
     padding-left: 0px;
-    margin-bottom: 50px;
   }
 `;

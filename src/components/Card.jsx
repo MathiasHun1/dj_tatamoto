@@ -40,7 +40,7 @@ const ImageWrapper = styled.div`
   position: relative;
   width: 120px;
   height: min-content;
-  box-shadow: 0px 0px 80px gray;
+  box-shadow: 0px 0px 40px gray;
 `;
 
 const Image = styled.img``;

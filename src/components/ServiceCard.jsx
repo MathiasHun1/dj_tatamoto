@@ -8,7 +8,7 @@ const ServiceCard = ({ imageSource, svgSource, svgWidth, cardSize, cardText, chi
 
   return (
     <Wrapper style={{ '--wrap-direction': directionProp }}>
-      <ImagesContainer>
+      <ImagesContainer style={{ '--wrap-direction': directionProp }}>
         <Card imageSource={imageSource} size={cardSize} text={cardText} />
         <SvgImage svgSource={svgSource} svgWidth={svgWidth} />
       </ImagesContainer>
@@ -19,7 +19,6 @@ const ServiceCard = ({ imageSource, svgSource, svgWidth, cardSize, cardText, chi
 
 const Wrapper = styled.div`
   background: ${COLORS.darkblue};
-  color: white;
   padding: 16px;
   padding-block: 26px;
   margin-bottom: 16px;
@@ -35,16 +34,21 @@ const Wrapper = styled.div`
     justify-content: center;
     align-items: center;
     gap: 32px;
-    padding-right: 32px;
-    padding-left: 32px;
-    margin-bottom: 48px;
+    padding-top: 40px;
   }
 `;
 
 const ImagesContainer = styled.div`
   display: flex;
+  flex-direction: var(--wrap-direction);
   align-items: center;
   justify-content: space-between;
+  max-width: 690px;
+  width: 100%;
+
+  @media (${QUERIES.tabletAndUp}) {
+    justify-content: space-around;
+  }
 `;
 
 const ChildWrapper = styled.div`

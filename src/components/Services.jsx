@@ -11,7 +11,7 @@ import { COLORS, QUERIES } from '../constants';
 const Services = () => {
   return (
     <Wrapper id="services">
-      <Title background={`linear-gradient(black, ${COLORS.darkblue})`}>Szolgáltatásaim</Title>
+      <Title background={`linear-gradient(${COLORS.primary}, ${COLORS.darkblue})`}>Szolgáltatásaim</Title>
       <ServiceCard
         imageSource={weddingPic}
         svgSource={heartSVG}
@@ -19,7 +19,7 @@ const Services = () => {
         cardSize={'large'}
         cardText={'Esküvő'}
         direction={'row'}>
-        <p>
+        <Text>
           Mint gépzenei szolgáltató, a jó zene és szórakoztatás biztosítására specializálódtam. Kifejezetten kisebb
           esküvőket vállalok mert szeretem ha családias és közvetlen a légkör. Hozzám odajöhet a vendéged számot kérni,
           vagy akárcsak a mikrofonba szeretne énekelni, szívesen fogadom és teljesítem a kívánságát. Jól tudom hogy
@@ -27,7 +27,7 @@ const Services = () => {
           együttműködök veletek, hogy egyedi stílusotoknak megfelelő lejátszási listát állítsak össze, ezzel biztosítva,
           hogy az esküvőtök emlékezetes és szórakoztató legyen Nektek, és minden vendég számára. Ünnepeljük együtt a
           szerelmet a tökéletes zenei aláfestéssel!
-        </p>
+        </Text>
       </ServiceCard>
 
       <Separator />
@@ -39,12 +39,12 @@ const Services = () => {
         cardSize={'large'}
         cardText={'Rendezvény'}
         direction={'reverse'}>
-        <p>
+        <Text>
           Legyen szó szilveszteri buliról, születésnapról vagy céges eseményről, fontos számomra, hogy az est minden
           pillanata emlékezetes legyen. Együtt dolgozva alakítjuk ki a zenei programot, amely teljes mértékben tükrözi
           az elképzeléseiteket és az esemény jellegét. Garantálom, hogy a vendégek jól szórakoznak, és a buli valóban
           különleges élménnyé válik. Ünnepeljünk együtt a legjobb dallamokkal és fantasztikus energiával!
-        </p>
+        </Text>
       </ServiceCard>
     </Wrapper>
   );
@@ -63,10 +63,17 @@ const Separator = styled.div`
   width: 100%;
   height: 4px;
   background: black;
-  /* margin: 48px auto; */
   margin-inline: auto;
   margin-top: 0;
   border-radius: 10px;
+
+  @media (${QUERIES.tabletAndUp}) {
+    margin-bottom: 20px;
+  }
+`;
+
+const Text = styled.p`
+  max-width: 690px;
 `;
 
 export default Services;

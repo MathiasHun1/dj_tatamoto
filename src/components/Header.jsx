@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { FONTSIZES, QUERIES } from '../constants';
+import { COLORS, FONTSIZES, QUERIES } from '../constants';
 import { useEffect, useState } from 'react';
 import 'material-symbols';
 
@@ -29,7 +29,7 @@ const Header = ({ setShowMobile }) => {
   return (
     <MainHeader className={`${showHeader ? '' : 'hidden'}`}>
       <Side>
-        <a href="#home" style={{ textDecoration: 'none', color: 'black' }}>
+        <a href="#home" style={{ textDecoration: 'none', color: COLORS.white }}>
           <Logo>DJ TataMoto</Logo>
         </a>
       </Side>
@@ -50,7 +50,7 @@ const Header = ({ setShowMobile }) => {
 };
 
 const MainHeader = styled.div`
-  background: black;
+  background: ${COLORS.primary};
   display: flex;
   align-items: center;
   padding: 12px 24px;
@@ -62,7 +62,6 @@ const MainHeader = styled.div`
 `;
 
 const Logo = styled.h1`
-  color: white;
   text-wrap: nowrap;
   margin-left: 0;
   font-size: ${FONTSIZES.largeMobile};

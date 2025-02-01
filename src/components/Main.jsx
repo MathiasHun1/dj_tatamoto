@@ -29,6 +29,7 @@ const MainWrapper = styled.main`
   padding-bottom: 32px;
   background: ${COLORS.darkblue};
   position: relative;
+  overflow: hidden;
 `;
 
 export default Main;

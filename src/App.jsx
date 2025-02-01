@@ -3,7 +3,7 @@ import Header from './components/Header';
 import Main from './components/Main';
 
 import { useState } from 'react';
-import { FONTSIZES, QUERIES } from './constants';
+import { COLORS, FONTSIZES, QUERIES } from './constants';
 
 function App() {
   const [showMobileMenu, setShowMobile] = useState(false);
@@ -22,7 +22,7 @@ const Wrapper = styled.div`
   max-width: 1700px;
   margin: 0px auto;
   font-size: ${FONTSIZES.smallMobile};
-  overflow: hidden;
+  color: ${COLORS.white};
 
   @media (${QUERIES.tabletAndUp}) {
     font-size: ${FONTSIZES.smallDesktop};

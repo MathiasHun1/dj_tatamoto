@@ -17,7 +17,6 @@ const About = () => {
             MAHASZ jogdíjjal rendelkezem {'('}Magyar Hangfelvétel-kiadók Szövetsége{')'}. Számlaképes szolgáltatóként,
             minden esetben ÁFA-mentes számla készül.
           </Text>
-          {/* <Text>Számlaképes szolgáltatóként, minden esetben ÁFA-mentes számla készül.</Text> */}
         </TextContainer>
       </Card>
     </Wrapper>
@@ -40,23 +39,25 @@ const Wrapper = styled.article`
 
 const MainTitle = styled.h1`
   font-size: ${FONTSIZES.mediumMobile};
-  color: ${COLORS.lightBlue};
+  color: ${COLORS.moderateBlue};
   line-height: 1.875rem;
+  width: 100%;
+  text-align: center;
 
   @media (${QUERIES.tabletAndUp}) {
     font-size: ${FONTSIZES.mediumDesktop};
+    text-align: start;
+    transform: translateX(-20px);
   }
 `;
 
-const Card = styled.div`
-  width: clamp(500px, 70%, 900px);
-`;
+const Card = styled.div``;
 
 const TextContainer = styled.div`
-  color: white;
   display: flex;
   flex-direction: column;
   gap: 8px;
+  max-width: 690px;
 
   @media (${QUERIES.tabletAndUp}) {
     align-items: center;
@@ -64,9 +65,11 @@ const TextContainer = styled.div`
 `;
 
 const Text = styled.p`
-  // &:not(:first-of-type) {
-  //   text-indent: 32px;
-  // }
+  @media (${QUERIES.tabletAndUp}) {
+    &:first-of-type {
+      margin-bottom: 20px;
+    }
+  }
 `;
 
 export default About;

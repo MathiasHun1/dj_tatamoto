@@ -51,9 +51,6 @@ h6 {
 }
 
 /* 8. Improve line wrapping */
-p {
-  text-wrap: pretty;
-}
 h1,
 h2,
 h3,
@@ -73,7 +70,7 @@ h6 {
 
 html, body, #root {
   height: 100%;
-  font-family: 'Sen', sans-serif;
+  font-family: 'Inter','Sen', sans-serif;
 }
 
 html {
@@ -90,7 +87,6 @@ body {
   text-align: start;
   
   @media (${QUERIES.tabletAndUp}) {
-    text-align: justify;
   }
 }
 

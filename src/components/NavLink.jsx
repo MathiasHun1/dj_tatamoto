@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { COLORS } from '../constants';
 
 const NavLink = ({ children, ...delegated }) => {
   return (
@@ -11,10 +12,9 @@ const NavLink = ({ children, ...delegated }) => {
 
 const Wrapper = styled.a`
   position: relative;
-  color: black;
   overflow: hidden;
   text-decoration: none;
-  color: white;
+  color: ${COLORS.white};
   z-index: 10;
 
   &:hover {
