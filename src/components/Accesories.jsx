@@ -116,13 +116,6 @@ const Wrapper = styled.div`
   }
 `;
 
-const ListWrapper = styled.div`
-  width: 690px;
-  padding: 0;
-  @media (${QUERIES.tabletAndUp}) {
-  }
-`;
-
 const ListItem = styled.li`
   list-style-type: none;
   display: flex;
@@ -160,8 +153,11 @@ const ImageSection = styled.div`
   width: fit-content;
   justify-content: start;
   border-radius: 4px;
-  padding-left: 16px;
+  /* padding-left: 16px; */
   margin-top: 16px;
+  margin-left: 16px;
+  border-radius: 5px;
+  overflow: hidden;
 
   @media (${QUERIES.tabletAndUp}) {
     display: none;
