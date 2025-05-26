@@ -11,13 +11,10 @@ const Contacts = () => {
       <Title background={`linear-gradient(${COLORS.primary}, ${COLORS.darkblue})`}>Árak, kapcsolat</Title>
 
       <Inner>
-        <InnerTitle>Pest megyén belül:</InnerTitle>
         <p>
-          - 150.000ft, mely rugalmas időbeosztással, tárgynap kora délután-tól hajnalig tarthat. Az ár tartalmazza az
-          utazást, a teljes felszerelést, rejtett költségekkel nálam nem kell számolni.
+          Az árak a rendezvèny jellegètől függenek, ézèrt mindig szemèlyre szabottan határozzuk meg.. Árajánlatèrt
+          keressen a megadott elèrhetősègeken.
         </p>
-        <InnerTitle>Pest megyén kívül:</InnerTitle>
-        <p>- Pest megyén kívül kiszállási díj költsége 120ft/km, az alapdíjon felül.</p>
       </Inner>
       <Inner>
         <InnerTitle>Elérhetőség</InnerTitle>

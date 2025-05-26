@@ -34,7 +34,7 @@ const Accesories = () => {
 
       <List>
         <ListItem>
-          <Check strokeWidth={3} color={`${COLORS.lightBlue}`} /> <p>DJ pult: Pioneer DDJ FLX4</p>
+          <Check strokeWidth={3} color={`${COLORS.lightBlue}`} /> <p>DJ pult: Pioneer XDJ-RX2</p>
         </ListItem>
         <ListItem>
           <Check strokeWidth={3} color={`${COLORS.lightBlue}`} />
